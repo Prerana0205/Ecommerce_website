@@ -79,8 +79,8 @@ const Products = () => {
       <section id="portfolio" className="portfolio">
         <div className="container" data-aos="fade-up">
           <div className="section-title">
-            <h2>Portfolio</h2>
-            <p>Check our Portfolio</p>
+            <h2>Product</h2>
+            <p>Check our Product</p>
           </div>
           <div className="row">
             <div className="col-lg-12 d-flex justify-content-center">
