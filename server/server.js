@@ -8,7 +8,7 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const Razorpay = require('razorpay');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
@@ -47,11 +47,11 @@ const upload_1 = multer({ storage: productStorage });
 
 // Create MySQL connection
 const db = mysql.createConnection({
-    host: '127.0.0.1',
-    port: '3307', // Replace with your MySQL host
-    user: 'root', // Replace with your MySQL username
-    password: '', // Replace with your MySQL password
-    database: 'E-wellness'
+  host: process.env.DB_HOST || '127.0.0.1',
+  port: process.env.DB_PORT || '3307',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'E-wellness'
 });
 
 // Connect to MySQL
