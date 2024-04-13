@@ -11,7 +11,9 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://Prerana0205.github.io', // Update with your GitHub Pages URL
+}));
 
 const razorpay = new Razorpay({
   key_id: 'rzp_test_qK6F0Vc7Ao1QcU', // Replace with your actual Razorpay key ID
